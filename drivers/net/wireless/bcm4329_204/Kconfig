@@ -1,4 +1,4 @@
-config BCM4329
+config BCM4329_204
 	tristate "Broadcom 4329 wireless cards support"
 	depends on WIRELESS_EXT && MMC
 	---help---
@@ -11,21 +11,21 @@ config BCM4329
 	  unsure.
 
 config BCM4329_SOFTAP
-	depends on BCM4329
+	depends on BCM4329_204
 	bool "Broadcom 4329 Soft AP function"
 	---help---
 	  BCM4329 soft AP function	
 
 
 config BCM4329_FW_PATH
-	depends on BCM4329
+	depends on BCM4329_204
 	string "Firmware path"
 	default "/system/etc/firmware/fw_bcm4329.bin"
 	---help---
 	  Path to the firmware file.
 
 config BCM4329_NVRAM_PATH
-	depends on BCM4329
+	depends on BCM4329_204
 	string "NVRAM path"
 	default "/proc/calibration"
 	---help---

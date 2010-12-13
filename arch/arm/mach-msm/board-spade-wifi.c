@@ -98,6 +98,9 @@ static struct wifi_platform_data spade_wifi_control = {
 	.set_reset      = spade_wifi_reset,
 	.set_carddetect = spade_wifi_set_carddetect,
 	.mem_prealloc   = spade_wifi_mem_prealloc,
+#ifdef CONFIG_BCM4329_204
+	.dot11n_enable	= 1,
+#endif
 };
 
 static struct platform_device spade_wifi_device = {
