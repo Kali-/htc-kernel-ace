@@ -89,7 +89,7 @@ static struct resource spade_wifi_resources[] = {
 		.name		= "bcm4329_wlan_irq",
 		.start		= MSM_GPIO_TO_INT(SPADE_GPIO_WIFI_IRQ),
 		.end		= MSM_GPIO_TO_INT(SPADE_GPIO_WIFI_IRQ),
-#ifndef CONFIG_BCM4329_204
+#ifdef CONFIG_BCM4329_204_MODULE
 		.flags          = IORESOURCE_IRQ | IORESOURCE_IRQ_LOWEDGE,
 #else
 		.flags          = IORESOURCE_IRQ | IORESOURCE_IRQ_HIGHLEVEL | IORESOURCE_IRQ_SHAREABLE,
@@ -102,7 +102,7 @@ static struct wifi_platform_data spade_wifi_control = {
 	.set_reset      = spade_wifi_reset,
 	.set_carddetect = spade_wifi_set_carddetect,
 	.mem_prealloc   = spade_wifi_mem_prealloc,
-#ifdef CONFIG_BCM4329_204
+#ifdef CONFIG_BCM4329_204_MODULE
 	.dot11n_enable	= 1,
 #endif
 };
