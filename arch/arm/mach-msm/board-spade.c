@@ -199,10 +199,10 @@ void spade_add_usb_devices(void)
 	android_usb_pdata.serial_number = board_serialno();
 	msm_device_hsusb.dev.platform_data = &msm_hsusb_pdata;
 	config_spade_usb_id_gpios(0);
+	platform_device_register(&msm_device_hsusb);
 #ifdef CONFIG_USB_ANDROID_RNDIS
 	platform_device_register(&rndis_device);
 #endif
-	platform_device_register(&msm_device_hsusb);
 	platform_device_register(&usb_mass_storage_device);
 	platform_device_register(&android_usb_device);
 }

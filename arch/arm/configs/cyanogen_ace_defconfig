@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
 # Linux kernel version: 2.6.32.27
-# Thu Jan  6 10:14:20 2011
+# Thu Jan  6 10:19:53 2011
 #
 CONFIG_ARM=y
 CONFIG_SYS_SUPPORTS_APM_EMULATION=y
@@ -979,7 +979,7 @@ CONFIG_WLAN=y
 CONFIG_BCM4329=m
 CONFIG_BCM4329_FW_PATH="/system/etc/firmware/fw_bcm4329.bin"
 CONFIG_BCM4329_NVRAM_PATH="/proc/calibration"
-# CONFIG_BCM4329_ENABLE_CSCAN is not set
+CONFIG_BCM4329_ENABLE_CSCAN=y
 # CONFIG_BCM4329_204 is not set
 
 #
